@@ -75,6 +75,30 @@ header .tel-icon {
     margin: 0 20px 0 0;
 }
 
+.primary-btn-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 5px 5px 5px 22px;
+    border-radius: 40px;
+    width: fit-content;
+}
+
+.primary-btn-wrap p{
+    margin: 0;
+    color: var(--white-color);
+    font-family: var(--primary-font);
+    font-size: 20px;  
+}
+
+.primary-btn-wrap .svg-wrap{
+    background-color: var(--white-color);
+    padding: 10px;
+    margin: 0 0 0 10px;
+    border-radius: 30px;
+}
+
 /* Banner */
 
 .banner {
@@ -84,21 +108,25 @@ header .tel-icon {
     background-repeat: no-repeat;
     background-size: cover;
 
-    position: relative;
-
+    /* position: relative; */
+/* 
     display: flex;
-    align-items: center;
+    align-items: center; */
 
 }
 
-.banner::after {
+/* .banner::after {
     position: absolute;
     left: 0;
     top: 0;
     content: '';
     width: 100%;
     height: 100%;
-    /* background-color: #00000070; */
+
+} */
+
+.banner .content-box{
+    padding: 100px 0 0 0;
 }
 
 .banner .content-box .left h1 {
@@ -136,12 +164,12 @@ header .tel-icon {
 .banner .form-box h4 {
     text-align: center;
     color: #002F4E;
-    font-size: 40px;
+    font-size: 30px;
     font-family: var(--primary-font);
     font-weight: 500;
 }
 
-.banner .form-box input {
+.banner .form-box input,.banner .form-box select {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -150,6 +178,7 @@ header .tel-icon {
 .banner .form-box form{
     margin: 30px 0 0 0;
 }
+
 .banner .form-box input::placeholder{
     font-size: 16px;
     font-family: var(--primary-font);
@@ -157,6 +186,44 @@ header .tel-icon {
     font-weight: 500;
 }
 
+.banner .form-box select option{
+    font-size: 16px;
+    font-family: var(--primary-font);
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.banner .form-box .button-box{
+   display: flex;
+   justify-content: end;
+}
+
+.banner .counter-box{
+    /* position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: max-content; */
+    margin: 100px 0 0 0;
+}
+
+
+.banner .counter-box p{
+    font-family: var(--primary-font);
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    line-height: 0;
+}
+
+.banner .counter-box h3{
+    font-family: var(--primary-font);
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 64px;
+    margin: 0;
+}
 
 /* About */
 
@@ -275,6 +342,10 @@ header .tel-icon {
     color: var(--primary-color);
 }
 
+.projects .tab-content .card{
+    border: 0;
+}
+
 .projects .tab-content .card-box {
     display: flex;
     gap: 10px;
@@ -288,6 +359,28 @@ header .tel-icon {
 
 .projects .tab-content .card-box .card-border .card {
     border-radius: 20px;
+}
+
+/* testimonial */
+
+.testimonial{
+    margin: 100px 0 0 0;
+}
+
+.testimonial .heading-wrap h2{
+    font-family: var(--primary-font);
+    color: var(--black-color);
+    font-size: 42px;
+    margin: 0;
+}
+
+.testimonial .heading-wrap p{
+    color: var(--black-color);
+    font-size: 16px;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    padding: 8px 0 0 0;
+    margin: 0;
 }
 
 
