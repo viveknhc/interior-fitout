@@ -1,0 +1,197 @@
+@media only screen and (max-width:999px) {
+
+}
+
+@media only screen and (max-width:767px) {
+    header {
+        padding: 0;
+    }
+    .banner {
+        height: auto;
+    }
+
+    .banner .content-box {
+        padding: 40px 0 0 0;
+    }
+
+    .banner .content-box .left h1 {
+        font-size: 40px;
+    }
+
+    .banner .content-box .left p {
+        font-size: 14px;
+    }
+
+    .banner .form-box {
+        background-color: #BDBDBD;
+        border-radius: 30px;
+        padding: 30px;
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+
+    .banner .form-box h4 {
+        font-size: 25px;
+    }
+
+    .banner .counter-box {
+        margin: 50px auto 0 auto;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .banner .counter-box h3 {
+        font-size: 35px;
+    }
+
+    .about {
+        margin: 50px 0 0 0;
+    }
+
+    .heading-box h5 {
+        font-size: 14px;
+    }
+
+    .heading-box h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .heading-box-white h2 {
+        font-size: 30px;
+    }
+
+    .heading-box-white h5 {
+        font-size: 14px;
+    }
+    .service {
+        margin: 50px 0 0 0;
+        padding: 50px 0;
+    }
+
+    .service .content-box {
+        margin: 20px 0 0 0;
+    }
+
+    .service .card-body .card-title {
+        color: var(--black-color);
+        font-size: 25px;
+    }
+
+    .service .card-body .card-text {
+        color: var(--black-color);
+        font-size: 14px;
+        padding: 0px 0 0 0;
+    }
+
+    .projects .circle-logo {
+        position: absolute;
+        left: -13%;
+        top: 0%;
+        max-width: 25%;
+    }
+
+    .projects .heading-box {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .projects .tab-content .card-box .card-wrap {
+        /* border: 1px solid var(--primary-color); */
+        padding: 10px 0 0 0;
+        border-radius: 20px;
+    }
+
+    .testimonial .heading-wrap h2 {
+        font-size: 30px;
+    }
+
+    .testimonial .circle-logo {
+        position: absolute;
+        right: -12%;
+        top: 0;
+        max-width: 25%;
+    }
+
+    .testimonial .heading-wrap p {
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .testimonial-section {
+        margin: 0 0 0 0;
+    }
+
+    .awards {
+        margin: 50px 0 0 0;
+        background-color: var(--primary-color);
+        padding: 50px 0;
+    }
+
+    .awards .award-box .content-box img {
+        transform: scale(0.8);
+    }
+
+    .awards .award-box .content-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+    .clients {
+        margin: 50px 0 0 0;
+    }
+
+    .contact-us .heading-box p {
+        font-family: var(--primary-font);
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .contact-us .box .phone-box p {
+        margin: 0 0 0 12px;
+        font-size: 16px;
+        color: var(--black-color);
+        font-weight: 500;
+        font-family: var(--primary-font);
+    }
+
+    .contact-us .box {
+        background-color: #D9D9D9;
+        border-radius: 30px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+    }
+
+    .contact-us .right h3 {
+        font-size: 30px;
+        font-family: var(--primary-font);
+        color: var(--primary-color);
+    }
+
+    .contact-us .right {
+        background-color: #D9D9D9;
+        height: 100%;
+        border-radius: 30px;
+        padding: 25px;
+    }
+
+    .contact-us .right form {
+        margin: 25px 0 0 0;
+    }
+
+    footer {
+        margin: 50px 0 0 0;
+        background-color: #001E32;
+        padding: 50px 0 0 0;
+    }
+}
