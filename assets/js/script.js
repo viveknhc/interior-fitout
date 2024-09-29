@@ -117,5 +117,5 @@ AOS.init();
 window.addEventListener('load', function () {
   setTimeout(function () {
     document.getElementById('preloader').classList.add('hide');
-  }, 2000); 
+  }, 1000); 
 });
