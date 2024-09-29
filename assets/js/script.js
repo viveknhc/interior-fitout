@@ -22,7 +22,7 @@ var swiper = new Swiper(".service_slide", {
       spaceBetween: 20
     },
     767: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 30
     },
     999: {
@@ -110,3 +110,12 @@ var swiper = new Swiper(".testimonial_slide", {
 // AOS
 
 AOS.init();
+
+// Preloader
+
+// Set the timeout to hide the loader after 3 seconds
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.getElementById('preloader').classList.add('hide');
+  }, 2000); 
+});
