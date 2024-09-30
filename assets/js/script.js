@@ -85,23 +85,19 @@ var swiper = new Swiper(".clients_slide", {
 
 
 var swiper = new Swiper(".testimonial_slide", {
-  // slidesPerView: 1.5,
   centeredSlides: true,
   speed: 1500,
-  // mousewheel: true,
   grabCursor: true,
 
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 20
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30
     },
     999: {
-      slidesPerView: 1.5,
+      slidesPerView: 2.5,
     }
   }
 });

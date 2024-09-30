@@ -410,6 +410,10 @@ header .navbar-toggler img {
 
 }
 
+.circle-logo {
+    animation: rotateAnimation 9s infinite ease-in-out !important;
+}
+
 .projects .heading-box {
     text-align: center;
     margin: 0 0 50px 0;
@@ -570,7 +574,7 @@ header .navbar-toggler img {
     border-radius: 25px;
     transition: all 200ms linear;
     object-fit: cover;
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
 
 
@@ -578,7 +582,7 @@ header .navbar-toggler img {
 .testimonial-section .swiper-slide-active .img-box img {
     /* height: 55vh; */
     border-radius: 25px;
-    transform: scale(1);
+    transform: scale(0.9);
 
 }
 
@@ -777,6 +781,7 @@ header .navbar-toggler img {
     border: none;
     border-radius: 10px;
     padding: 10px;
+    margin: 0 0 20px 0;
 }
 
 
@@ -1029,3 +1034,12 @@ footer .copy-right p {
 .hide {
     display: none;
 }
+
+@keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
