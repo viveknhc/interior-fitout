@@ -4,14 +4,11 @@ var swiper = new Swiper(".service_slide", {
   spaceBetween: 30,
   grabCursor: true,
   loop: true,
-  navigation: {
-    nextEl: '.next-btn', // Custom next button class
-    prevEl: '.prev-btn', // Custom prev button class
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
   breakpoints: {
     200: {
       slidesPerView: 1,
@@ -86,6 +83,7 @@ var swiper = new Swiper(".clients_slide", {
 
 var swiper = new Swiper(".testimonial_slide", {
   centeredSlides: true,
+  loop:true,
   speed: 1500,
   grabCursor: true,
 

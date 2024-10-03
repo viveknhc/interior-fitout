@@ -377,9 +377,10 @@
         font-family: var(--primary-font);
         color: var(--white-color);
         font-weight: 400;
-        font-size: 16px;
+        font-size: 12px;
         margin: 0 0 10px 0;
-        line-height: 0;
+        /* line-height: 0; */
+        display: inline;
     }
 
     .banner-mob .counter-box h3 {
