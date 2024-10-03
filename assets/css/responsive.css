@@ -183,6 +183,14 @@
         padding: 0px 0 0 0;
     }
 
+    .projects .tab-content .card .description-box h1 {
+        font-size: 16px;
+    }
+
+    .projects .tab-content .card .description-box p {
+        font-size: 14px;
+    }
+
     .projects .circle-logo {
         position: absolute;
         left: -13%;
@@ -494,6 +502,27 @@
         left: -13%;
         top: 0%;
         max-width: 25%;
+    }
+
+    .projects .tab-content .card-box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .projects .tab-content .card .description-box h1 {
+        font-size: 22px;
+        color: var(--white-color);
+        font-family: var(--primary-font);
+        font-weight: 600;
+        display: inline;
+        text-align: start;
+    }
+
+    .projects .tab-content .card .description-box p {
+        color: var(--white-color);
+        font-weight: 400;
+        font-size: 12px;
     }
 
     .projects .heading-box {
