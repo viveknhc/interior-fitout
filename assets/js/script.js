@@ -4,6 +4,10 @@ var swiper = new Swiper(".service_slide", {
   spaceBetween: 30,
   grabCursor: true,
   loop: true,
+  navigation: {
+    nextEl: '.next-btn',
+    prevEl: '.prev-btn', 
+  },
 
   autoplay: {
     delay: 2500,
@@ -43,7 +47,7 @@ var swiper = new Swiper(".clients_slide", {
   loop: true,
   navigation: {
     nextEl: '.next-btn', // Custom next button
-    prevEl: '.prev-btn', // Custom prev button
+    prevEl: '.prev-btn', 
   },
   // autoplay: {
   //   delay: 2500,
