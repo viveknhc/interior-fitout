@@ -470,6 +470,8 @@ header .navbar-toggler img {
 .projects .tab-content .card {
     position: relative;
     overflow: hidden;
+    height: 100%;
+    object-fit: cover;
 }
 
 .projects .tab-content .card:hover::after {
@@ -521,6 +523,7 @@ header .navbar-toggler img {
 .projects .tab-content .card img {
     transition: all 0.3s ease-in-out;
     position: relative;
+    height: 100%;
 
 }
 
@@ -539,6 +542,17 @@ header .navbar-toggler img {
     /* border: 1px solid var(--primary-color); */
     padding: 10px;
     border-radius: 20px;
+    height: 60vh;
+    flex: 1;
+}
+
+.fancybox-caption__body {
+
+    font-size: 30px !important;
+}
+
+#pills-profile .card-box .card-wrap{
+    flex: initial;
 }
 
 .projects .tab-content .card-box .card-border .card {
@@ -872,6 +886,7 @@ footer {
 
 footer .box img {
     margin: 0 0 20px 0;
+    max-width: 135px;
 }
 
 footer .box p {
@@ -879,6 +894,7 @@ footer .box p {
     font-family: var(--primary-font);
     font-size: 16px;
     font-weight: 300;
+    width: 60%;
 }
 
 footer .box h6 {
@@ -890,6 +906,7 @@ footer .box h6 {
 }
 
 footer .box ul {
+    padding: 0;
     list-style: none;
 }
 

@@ -49,7 +49,7 @@
                         </li>
 
                         <li class="nav-item"></li>
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#project">Projects</a>
                         </li>
 
                         <li class="nav-item"></li>
@@ -92,9 +92,7 @@
                             <h1 data-aos="fade-right" data-aos-duration="1500">Interior Fitout
                                 Company in Dubai</h1>
                             <p data-aos="fade-right" data-aos-duration="1500">
-                                Lorem ipsum dolor sit amet consectetur. Nec enim tellus suspendisse viverra vitae
-                                malesuada. Amet quisque tincidunt volutpat duis rhoncus iaculis eget morbi et. Mauris
-                                nam eu vivamus at. Morbi
+                                Fitout Bureau Interiors is one of the leading Interior Fit Out Company in Dubai. We create beautiful and functional spaces.
                             </p>
 
                             <div data-aos="fade-right" data-aos-duration="2500">
@@ -123,7 +121,7 @@
 
                                     <div class="col-lg-6">
                                         <select name="service" id="service">
-                                            <option disabled value="">Service</option>
+                                            <option selected disabled value="">Service</option>
                                             <option value="Service1">Interior Design</option>
                                             <option value="Service2">Interior Fitout</option>
                                             <option value="Service3">Interior Design & Fitout</option>
@@ -133,7 +131,7 @@
 
                                     <div class="col-lg-6">
                                         <select name="projects" id="projects">
-                                            <option disabled value="">Projects</option>
+                                            <option selected disabled value="">Projects</option>
                                             <option value="Service1">Commercial</option>
                                             <option value="Service2">Residential</option>
                                             <option value="Service3">Retail</option>
@@ -481,7 +479,7 @@
 
     <!-- Projects -->
 
-    <section class="projects" id="projects">
+    <section class="projects" id="project">
         <img class="img-fluid circle-logo" src="assets/images/circle-logo.png" alt="" data-aos="fade-right"
             data-aos-duration="500">
         <div class="container">
@@ -490,6 +488,8 @@
                 <h2>Interior Fitout Company In <br> Dubai</h2>
             </div>
 
+
+            <!-- Tabs -->
             <div class="tab-box" data-aos="fade-up" data-aos-duration="1000">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -507,162 +507,231 @@
                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
                             aria-selected="false">Residential</button>
                     </li>
-
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-FB" data-bs-toggle="pill" data-bs-target="#pills-FB"
+                        <button class="nav-link" id="pills-FB-tab" data-bs-toggle="pill" data-bs-target="#pills-FB"
                             type="button" role="tab" aria-controls="pills-FB" aria-selected="false">F&B</button>
                     </li>
-
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        <button class="nav-link" id="pills-retail-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-retail" type="button" role="tab" aria-controls="pills-retail"
                             aria-selected="false">Retail</button>
                     </li>
-
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other"
                             aria-selected="false">Other</button>
                     </li>
-
                 </ul>
             </div>
 
-
-
+            <!-- Content -->
             <div class="tab-content" id="pills-tabContent">
-
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                     tabindex="0">
+
+
                     <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-wrap">
+                        <a href="assets/images/project1.png" data-fancybox="project" data-caption="The Heart Of Europe" class="card-wrap">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/project1.png" alt="">
-
                                 <div class="description-box">
                                     <h1>The Heart Of Europe</h1>
-                                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel ex possimus
-                                        modi?</p> -->
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card-wrap">
-                            <div class="card">
-                                <img class="img-fluid" src="assets/images/project2.png" alt="">
-                                <div class="description-box">
-                                    <h1>Project Name</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni soluta totam
-                                        accusamus, laboriosam veniam, explicabo facere atque </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                           
+                        </a>
 
-                    <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-wrap">
+                        <a class="card-wrap" href="assets/images/residential1.png" data-fancybox="project" data-caption="Villa E33 - Jumeirah Park, Dubai">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/residential1.png" alt="">
                                 <div class="description-box">
                                     <h1>Villa E33 - Jumeirah Park, Dubai</h1>
-                                   
+
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="card-wrap">
+                    
+                    </div>
+
+                    <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
+                       
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/residential2.png" data-caption="Elite Residence - Dubai Marina">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/residential2.png" alt="">
                                 <div class="description-box">
                                     <h1>Elite Residence - Dubai Marina</h1>
-                                 
+
                                 </div>
                             </div>
-                        </div>
+                        </a>
+
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Costa Coffee - Marina Mall, Abu Dhabi-compressed.jpg" data-caption="Costa Coffee - Marina Mall, Abu Dhabi">
+                            <div class="card">
+                                <img class="img-fluid"
+                                    src="assets/images/Costa Coffee - Marina Mall, Abu Dhabi-compressed.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Costa Coffee - Marina Mall, Abu Dhabi</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Masaar-Loop Bike Hub -Sharjah -compressed.jpg" data-caption="Masaar - Loop Cafe & Bike Hub">
+                            <div class="card">
+                                <img class="img-fluid" src="assets/images/Masaar-Loop Bike Hub -Sharjah -compressed.jpg"
+                                    alt="">
+                                <div class="description-box">
+                                    <h1>Masaar - Loop Cafe & Bike Hub</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
+
 
                     <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-wrap">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Kado - Mirdif, Dubai-compressed.jpg" data-caption="Kado, Mirdif - Dubai">
                             <div class="card">
-                                <img class="img-fluid" src="assets/images/project5.png" alt="">
+                                <img class="img-fluid"
+                                    src="assets/images/Kado - Mirdif, Dubai-compressed.jpg" alt="">
                                 <div class="description-box">
-                                    <h1>Project Name</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel ex possimus
-                                        modi?</p>
+                                    <h1>Kado, Mirdif - Dubai</h1>
+    
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="card-wrap">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Artal by Arada, Sharjah.jpg" data-caption="Artal by Arada - Sharjah">
                             <div class="card">
-                                <img class="img-fluid" src="assets/images/project6.png" alt="">
+                                <img class="img-fluid" src="assets/images/Artal by Arada, Sharjah.jpg" alt="">
                                 <div class="description-box">
-                                    <h1>Project Name</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel ex possimus
-                                        modi?</p>
-                                </div>
-                            </div>
-                        </div>
+                                    <h1>Artal by Arada - Sharjah</h1>
 
-                        <div class="card-wrap">
-                            <div class="card">
-                                <img class="img-fluid" src="assets/images/project7.png" alt="">
-                                <div class="description-box">
-                                    <h1>Project Name</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel ex possimus
-                                        modi?</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+    
                     </div>
+                   
                 </div>
 
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
-                    <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
-
-
-                        <div class="card-wrap">
+                    <div class="card-box"  data-aos="fade-up" data-aos-duration="1000">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/project1.png" data-caption="The Heart Of Europe">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/project1.png" alt="">
                                 <div class="description-box">
                                     <h1>The Heart Of Europe</h1>
-                                    
+
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
 
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
                     tabindex="0">
-
-                    <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-wrap">
+                    <div class="card-box"  data-aos="fade-up" data-aos-duration="1000">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/residential1.png" data-caption="Villa E33 - Jumeirah Park, Dubai">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/residential1.png" alt="">
                                 <div class="description-box">
                                     <h1>Villa E33 - Jumeirah Park, Dubai</h1>
-                                   
+
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="card-wrap">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/residential2.png" data-caption="Elite Residence - Dubai Marina">
                             <div class="card">
                                 <img class="img-fluid" src="assets/images/residential2.png" alt="">
                                 <div class="description-box">
                                     <h1>Elite Residence - Dubai Marina</h1>
-                                 
+
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
 
+                <div class="tab-pane fade" id="pills-FB" role="tabpanel" aria-labelledby="pills-FB-tab" tabindex="0">
+                    <div class="card-box"  data-aos="fade-up" data-aos-duration="1000">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Costa Coffee - Marina Mall, Abu Dhabi-compressed.jpg" data-caption="Costa Coffee - Marina Mall, Abu Dhabi">
+                            <div class="card">
+                                <img class="img-fluid"
+                                    src="assets/images/Costa Coffee - Marina Mall, Abu Dhabi-compressed.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Costa Coffee - Marina Mall, Abu Dhabi</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Masaar-Loop Bike Hub -Sharjah -compressed.jpg" data-caption="Masaar - Loop Cafe & Bike Hub">
+                            <div class="card">
+                                <img class="img-fluid" src="assets/images/Masaar-Loop Bike Hub -Sharjah -compressed.jpg"
+                                    alt="">
+                                <div class="description-box">
+                                    <h1>Masaar - Loop Cafe & Bike Hub</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-retail" role="tabpanel" aria-labelledby="pills-retail-tab"
+                    tabindex="0">
+                    <div class="card-box"  data-aos="fade-up" data-aos-duration="1000">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Kado - Mirdif, Dubai-compressed.jpg" data-caption="Kado, Mirdif - Dubai">
+                            <div class="card">
+                                <img class="img-fluid" src="assets/images/Kado - Mirdif, Dubai-compressed.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Kado, Mirdif - Dubai</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Artal by Arada, Sharjah.jpg" data-caption="Artal by Arada - Sharjah">
+                            <div class="card">
+                                <img class="img-fluid" src="assets/images/Artal by Arada, Sharjah.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Artal by Arada - Sharjah</h1>
+
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab"
+                    tabindex="0">
+                    <div class="card-box"  data-aos="fade-up" data-aos-duration="1000">
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/Kado - Mirdif, Dubai-compressed.jpg" data-caption="Kado, Mirdif - Dubai">
+                            <div class="card">
+                                <img class="img-fluid"
+                                    src="assets/images/Kado - Mirdif, Dubai-compressed.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Kado, Mirdif - Dubai</h1>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
+
 
         </div>
     </section>
@@ -809,27 +878,109 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="assets/images/clients.png" class="card-img-top img-fluid" alt="...">
+                                <img src="assets/images/clients1.png" class="card-img-top img-fluid" alt="...">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="assets/images/clients.png" class="card-img-top img-fluid" alt="...">
+                                <img src="assets/images/clients2.png" class="card-img-top img-fluid" alt="...">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="assets/images/clients.png" class="card-img-top img-fluid" alt="...">
+                                <img src="assets/images/clients3.png" class="card-img-top img-fluid" alt="...">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="assets/images/clients.png" class="card-img-top img-fluid" alt="...">
+                                <img src="assets/images/clients4.png" class="card-img-top img-fluid" alt="...">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="assets/images/clients.png" class="card-img-top img-fluid" alt="...">
+                                <img src="assets/images/clients5.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients6.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients7.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients8.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients9.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients10.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients11.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients12.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients13.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients14.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients15.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients16.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients17.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients18.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients19.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients20.png" class="card-img-top img-fluid" alt="...">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="assets/images/clients21.png" class="card-img-top img-fluid" alt="...">
                             </div>
                         </div>
                     </div>
@@ -916,7 +1067,7 @@
 
                                     </select>
 
-                                
+
                                 </div>
 
                                 <div class="col-lg-6">
@@ -951,32 +1102,37 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-7">
                     <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                        <img class="img-fluid" src="assets/images/footer-logo.png" alt="">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="">
                         <p>
-                            Fitout Bureau Interiors is one of the leading Interior Fit Out Company in Dubai. We create beautiful and functional spaces.
+                            Fitout Bureau Interiors is one of the leading Interior Fit Out Company in Dubai. We create
+                            beautiful and functional spaces.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-2 col-6">
                     <div class="box" data-aos="fade-up" data-aos-duration="1000">
                         <h6>
                             Quick Links
                         </h6>
                         <ul>
                             <li>
-                                <a href="">Home</a>
+                                <a href="#about">About</a>
                             </li>
 
                             <li>
-                                <a href="">Home</a>
+                                <a href="#service">Service</a>
                             </li>
                             <li>
-                                <a href="">Home</a>
+                                <a href="#project">Projects</a>
                             </li>
                             <li>
-                                <a href="">Home</a>
+                                <a href="#testimonial">Testimonial</a>
+                            </li>
+
+                            <li>
+                                <a href="#contact">Contact</a>
                             </li>
 
                         </ul>
@@ -984,50 +1140,24 @@
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                        <h6>
-                            Quick Links
-                        </h6>
+                      
                         <ul>
                             <li>
-                                <a href="">Home</a>
+                                <a href="tel:+971554393355" class="d-flex align-items-center" > <img src="assets/images/footer-phone.png" class=" mb-0 me-3" alt=""> +971 55 439 3355</a>
                             </li>
 
                             <li>
-                                <a href="">Home</a>
+                                <a href="mailto:info@fitoutbureau.com" class="d-flex align-items-center" ><img src="assets/images/footer-mail.png" alt="" class=" mb-0 me-3"> info@fitoutbureau.com</a>
                             </li>
                             <li>
-                                <a href="">Home</a>
+                                <a href="" class="d-flex align-items-center" ><img src="assets/images/footer-location.png" alt="" class=" mb-0 me-3"> B-05 Behind Gold and Diamond Park, Al Quoz 3, Dubai, UAE</a>
                             </li>
-                            <li>
-                                <a href="">Home</a>
-                            </li>
+                          
 
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
-                    <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                        <h6>
-                            Quick Links
-                        </h6>
-                        <ul>
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+             
             </div>
         </div>
 
