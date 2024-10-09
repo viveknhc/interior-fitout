@@ -353,9 +353,14 @@ header .navbar-toggler img {
     margin: 50px 0 0 0;
 }
 
+.service .content-box .swiper-slide {
+    height: auto;
+}
+
 .service .card {
     border-radius: 20px;
     padding: 20px;
+    height: 100%;
 }
 
 .service .card-body {
@@ -626,6 +631,7 @@ header .navbar-toggler img {
     top: 50%;
     transform: translate(-50%, -50%);
     animation: zooming 3s linear infinite;
+    cursor: pointer;
 }
 
 
