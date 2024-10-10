@@ -50,10 +50,10 @@ var swiper = new Swiper(".clients_slide", {
     nextEl: '.next-btn', // Custom next button
     prevEl: '.prev-btn', 
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
 
     200: {
@@ -91,6 +91,10 @@ var swiper = new Swiper(".testimonial_slide", {
   loop: true,
   speed: 1500,
   grabCursor: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     640: {

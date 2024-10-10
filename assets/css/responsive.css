@@ -548,6 +548,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
     }
 
     .projects .tab-box .nav-link.active {
@@ -582,7 +583,11 @@
     }
 
     .projects .tab-content .card-box .card-wrap {
-        height: 26vh;
+        height: 18vh;
+    }
+
+    .projects .tab-box .nav-item {
+        margin: 0 0px 0 0;
     }
 
 
@@ -673,6 +678,12 @@
         margin: 50px 0 0 0;
         background-color: #001E32;
         padding: 50px 0 0 0;
+    }
+
+    footer .box p {
+
+        font-size: 14px;
+        width: 100%;
     }
 
 
