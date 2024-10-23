@@ -371,10 +371,14 @@ header .navbar-toggler img {
 .service .card .img-box {
     overflow: hidden;
     border-radius: 20px;
+    height: 260px;
 }
 
 .service .card .img-box img {
     transition: all 0.3s ease-in-out;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .service .card:hover .img-box img {
@@ -691,9 +695,34 @@ header .navbar-toggler img {
 
 .awards .award-box {
     border: 1px solid var(--white-color);
-    padding: 50px 0;
     border-radius: 20px;
+    padding: 50px 0;
 }
+
+.awards .award-box .prev-btn{
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(-50%,0);
+    background: transparent;
+    border: none;
+}
+
+.awards .award-box .next-btn{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translate(-50%,0);
+    background: transparent;
+    border: none;
+}
+
+.awards .award-box i{
+    color: #fff;
+    font-size: 40px;
+}
+
+
 
 .awards .award-box .content-box {
     display: flex;
@@ -701,15 +730,33 @@ header .navbar-toggler img {
     justify-content: space-evenly;
     margin: 50px 0 0 0;
     flex-wrap: wrap;
+    padding: 50px 100px 0 100px;
+    position: relative;
 }
 
 .awards .award-box .content-box img {
     transition: all 0.3s ease-in-out;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
-.awards .award-box .content-box img:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+
+.awards .card{
+    background-color: transparent;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.awards .card p{
+    color: var(--white-color);
+    font-family: var(--primary-font);
+    margin: 15px 0;
 }
 
 

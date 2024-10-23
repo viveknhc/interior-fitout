@@ -6,13 +6,13 @@ var swiper = new Swiper(".service_slide", {
   loop: true,
   navigation: {
     nextEl: '.next-btn',
-    prevEl: '.prev-btn', 
+    prevEl: '.prev-btn',
   },
 
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
 
   breakpoints: {
     200: {
@@ -41,6 +41,52 @@ var swiper = new Swiper(".service_slide", {
 
 
 
+var swiper = new Swiper(".awards_slide", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
+  navigation: {
+    nextEl: '.next-btn', // Custom next button
+    prevEl: '.prev-btn',
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+
+
+    // When window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // When window width is >= 768px
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+
+    999: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+    // When window width is >= 1024px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});
+
+
+
 var swiper = new Swiper(".clients_slide", {
   slidesPerView: 2,
   spaceBetween: 30,
@@ -48,7 +94,7 @@ var swiper = new Swiper(".clients_slide", {
   loop: true,
   navigation: {
     nextEl: '.next-btn', // Custom next button
-    prevEl: '.prev-btn', 
+    prevEl: '.prev-btn',
   },
   autoplay: {
     delay: 2000,
@@ -120,5 +166,5 @@ AOS.init();
 window.addEventListener('load', function () {
   setTimeout(function () {
     document.getElementById('preloader').classList.add('hide');
-  }, 1000); 
+  }, 1000);
 });

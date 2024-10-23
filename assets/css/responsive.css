@@ -1,4 +1,14 @@
 @media only screen and (max-width:999px) {
+    header .consultation-btn {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 16px;
+        text-decoration: none;
+        margin: 0;
+        padding: 8px 18px;
+        border-radius: 10px;
+        width: fit-content;
+    }
     .banner {
         display: none;
     }
@@ -317,6 +327,19 @@
 }
 
 @media only screen and (max-width:767px) {
+
+    header .consultation-btn {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 16px;
+        text-decoration: none;
+        margin: 0;
+        padding: 8px 18px;
+        border-radius: 10px;
+        width: fit-content;
+    }
+
+
     header {
         padding: 0;
     }
@@ -627,8 +650,33 @@
         justify-content: space-evenly;
         margin: 0px 0 0 0;
         flex-wrap: wrap;
+        padding: 0px 50px 0 50px;
     }
 
+    .awards .award-box {
+        border: 1px solid var(--white-color);
+        border-radius: 20px;
+        padding: 20px 0;
+    }
+
+    .awards .award-box .prev-btn {
+        position: absolute;
+        left: 40px;
+        top: 32%;
+        transform: translate(-50%, 0);
+        background: transparent;
+        border: none;
+    }
+    
+    .awards .award-box .next-btn {
+        position: absolute;
+        right: 40px;
+        top: 32%;
+        transform: translate(-50%, 0);
+        background: transparent;
+        border: none;
+    }
+    
     .clients {
         margin: 50px 0 0 0;
     }
