@@ -944,6 +944,7 @@ footer .box p {
     font-size: 16px;
     font-weight: 300;
     width: 60%;
+    margin: 0;
 }
 
 footer .box h6 {
@@ -961,7 +962,7 @@ footer .box ul {
 
 footer .box ul li {
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
 }
 
 footer .box ul li a {
@@ -1183,4 +1184,8 @@ footer .copy-right p {
     to {
         transform: rotate(360deg);
     }
+}
+
+.hidden{
+    visibility: hidden;
 }
