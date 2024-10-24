@@ -760,22 +760,22 @@
                     <div class="card-box" data-aos="fade-up" data-aos-duration="1000">
 
                         <a class="card-wrap" data-fancybox="project"
-                        href="assets/images/Kado - Mirdif, Dubai-compressed.jpg"
-                        data-caption="Kado, Mirdif - Dubai">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/Kado - Mirdif, Dubai-compressed.jpg" alt="">
-                            <div class="description-box">
-                                <h1>Kado, Mirdif - Dubai</h1>
+                            href="assets/images/Kado - Mirdif, Dubai-compressed.jpg"
+                            data-caption="Kado, Mirdif - Dubai">
+                            <div class="card">
+                                <img class="img-fluid" src="assets/images/Kado - Mirdif, Dubai-compressed.jpg" alt="">
+                                <div class="description-box">
+                                    <h1>Kado, Mirdif - Dubai</h1>
 
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-                        <a class="card-wrap" data-fancybox="project" href="assets/images/residential1.jpg">
-                         <div class="hidden">shfhskfjl</div>
                         </a>
 
-                       
+                        <a class="card-wrap" data-fancybox="project" href="assets/images/residential1.jpg">
+                            <div class="hidden">shfhskfjl</div>
+                        </a>
+
+
 
 
                     </div>
@@ -1135,27 +1135,27 @@
                             Schedule a free Consultation
                         </h3>
 
-                        <form action="">
+                        <form action="" id="contactForm">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Enter Your name">
+                                    <input id="name" name="name" type="text" placeholder="Enter Your name">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Enter Your Email">
+                                    <input id="email" name="email" type="text" placeholder="Enter Your Email">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Enter Your Phone">
+                                    <input id="phone" name="phone" type="text" placeholder="Enter Your Phone">
                                 </div>
 
                                 <div class="col-lg-6">
 
-                                    <select name="cars" id="cars">
+                                    <select name="service" id="service">
                                         <option selected disabled value="">Service</option>
-                                        <option value="Service1">Interior Design</option>
-                                        <option value="Service2">Interior Fitout</option>
-                                        <option value="Service3">Interior Design & Fitout</option>
+                                        <option value="Interior Design">Interior Design</option>
+                                        <option value="nterior Fitout">Interior Fitout</option>
+                                        <option value="Interior Design & Fitout">Interior Design & Fitout</option>
 
                                     </select>
 
@@ -1164,13 +1164,13 @@
                                 <div class="col-lg-6">
 
 
-                                    <select name="cars" id="cars">
+                                    <select name="projects" id="projects">
                                         <option selected disabled value="">Projects</option>
-                                        <option value="Service1">Commercial</option>
-                                        <option value="Service2">Residential</option>
-                                        <option value="Service3">Retail</option>
-                                        <option value="Service3">Hospitality</option>
-                                        <option value="Service3">Other</option>
+                                        <option value="Commercial">Commercial</option>
+                                        <option value="Residential">Residential</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="Hospitality">Hospitality</option>
+                                        <option value="Other">Other</option>
 
                                     </select>
 
@@ -1178,11 +1178,11 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Location">
+                                    <input id="location" name="location" type="text" placeholder="Location">
                                 </div>
 
                                 <div class="button-box">
-                                    <div class="primary-btn-wrap">
+                                    <button class="primary-btn-wrap">
                                         <p>Submit</p>
                                         <div class="svg-wrap">
 
@@ -1194,7 +1194,7 @@
                                             </svg>
                                         </div>
 
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                     </div>
@@ -1265,14 +1265,13 @@
 
                             <li>
                                 <a href="mailto:anaz@fitoutbureau.com" class="d-flex align-items-center"><img
-                                        src="assets/images/footer-mail.png"  alt="" class="hidden mb-0 me-3">
+                                        src="assets/images/footer-mail.png" alt="" class="hidden mb-0 me-3">
                                     <p>anaz@fitoutbureau.com</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="" class="d-flex align-items-center">
-                                    <img
-                                        src="assets/images/footer-location.png" alt="" class=" mb-0 me-3">
+                                    <img src="assets/images/footer-location.png" alt="" class=" mb-0 me-3">
                                     <p>B-05 Behind Gold and Diamond Park, Al Quoz 3, Dubai, UAE</p>
                                 </a>
                             </li>
@@ -1297,6 +1296,35 @@
     <script src="assets/js/smoothScroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const projects = document.getElementById('projects').value;
+            const location = document.getElementById('location').value;
+
+            // WhatsApp number (with country code, e.g., 1234567890 for +1234567890)
+            const phoneNumber = '919188683691';
+
+            // Generate WhatsApp message text
+            const message = `Hello, here is the form data: %0AName: ${name}%0Email: ${email}%0Phone: ${phone}%0Service: ${service}%0Projects: ${projects}%0Location: ${location}`;
+
+            // Create the WhatsApp URL with the phone number and the message
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Redirect to thankyou.html after 1 second (adjust timing as needed)
+            setTimeout(function () {
+                window.location.href = 'thankyou.html';
+            }, 1000); // 1 second delay to allow WhatsApp window to open
+        });
+    </script>
 
 
 </body>
