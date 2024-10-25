@@ -1300,6 +1300,7 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
@@ -1307,52 +1308,48 @@
             const projects = document.getElementById('projects').value;
             const location = document.getElementById('location').value;
 
-            // WhatsApp number (with country code, e.g., 1234567890 for +1234567890)
-            const phoneNumber = '919188683691';
+            // Generate the email message body, ensuring proper encoding for newlines
+            const message = `Hello, here is the form data: %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
 
-            // Generate WhatsApp message text
-            const message = `Hello, here is the form data: %0AName: ${name}%0Email: ${email}%0Phone: ${phone}%0Service: ${service}%0Projects: ${projects}%0Location: ${location}`;
+            // Create the mailto URL with subject and message
+            const mailUrl = `mailto:info@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
 
-            // Create the WhatsApp URL with the phone number and the message
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
+            // Open the email client
+            window.open(mailUrl, '_blank');
 
             // Redirect to thankyou.html after 1 second (adjust timing as needed)
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); // 1 second delay to allow WhatsApp window to open
+            }, 1000); // 1 second delay to allow the email window to open
         });
 
 
 
         document.getElementById('HerocontactForm').addEventListener('submit', function (event) {
             event.preventDefault();
+
             const heroName = document.getElementById('heroName').value;
-            const heroEmial = document.getElementById('heroEmial').value;
+            const heroEmail = document.getElementById('heroEmial').value;
             const heroPhone = document.getElementById('heroPhone').value;
             const heroService = document.getElementById('heroService').value;
             const heroProjects = document.getElementById('heroProjects').value;
             const heroLocation = document.getElementById('heroLocation').value;
 
-            // WhatsApp number (with country code, e.g., 1234567890 for +1234567890)
-            const heroPhoneNumber = '919188683691';
+            // Generate the email message body
+            const heroMessage = `Hello, here is the form data:%0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
 
-            // Generate WhatsApp message text
-            const heroMessage = `Hello, here is the form data: %0AName: ${heroName}%0Email: ${heroEmial}%0Phone: ${heroPhone}%0Service: ${heroService}%0Projects: ${heroProjects}%0Location: ${heroLocation}`;
+            // Create the mailto URL with the subject and body
+            const mailUrl = `mailto:info@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
 
-            // Create the WhatsApp URL with the phone number and the message
-            const whatsappUrl = `https://wa.me/${heroPhoneNumber}?text=${heroMessage}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
+            // Open the default email client
+            window.open(mailUrl, '_blank');
 
             // Redirect to thankyou.html after 1 second (adjust timing as needed)
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); // 1 second delay to allow WhatsApp window to open
+            }, 1000); // 1 second delay to allow email client to open
         });
+
     </script>
 
 
