@@ -109,46 +109,46 @@
                     <div class="col-lg-6">
                         <div class="form-box" data-aos="fade-left" data-aos-duration="1500">
                             <h4>Schedule a Consultation</h4>
-                            <form action="">
+                            <form action="" id="HerocontactForm">
                                 <div class="row g-4">
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Enter Your Name">
+                                        <input required id="heroName" type="text" placeholder="Enter Your Name">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Enter Your Email">
+                                        <input required id="heroEmial" type="text" placeholder="Enter Your Email">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Enter Your Phone">
+                                        <input required id="heroPhone" type="text" placeholder="Enter Your Phone">
                                     </div>
 
                                     <div class="col-lg-6">
-                                        <select name="service" id="service">
+                                        <select required name="service" id="heroService">
                                             <option selected disabled value="">Service</option>
-                                            <option value="Service1">Interior Design</option>
-                                            <option value="Service2">Interior Fitout</option>
-                                            <option value="Service3">Interior Design & Fitout</option>
+                                            <option value="Interior Design">Interior Design</option>
+                                            <option value="Interior Fitout">Interior Fitout</option>
+                                            <option value="Interior Design & Fitout">Interior Design & Fitout</option>
 
                                         </select>
                                     </div>
 
                                     <div class="col-lg-6">
-                                        <select name="projects" id="projects">
+                                        <select required name="projects" id="heroProjects">
                                             <option selected disabled value="">Projects</option>
-                                            <option value="Service1">Commercial</option>
-                                            <option value="Service2">Residential</option>
-                                            <option value="Service3">Retail</option>
-                                            <option value="Service3">Hospitality</option>
-                                            <option value="Service3">Other</option>
+                                            <option value="Commercial">Commercial</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Retail">Retail</option>
+                                            <option value="Hospitality">Hospitality</option>
+                                            <option value="Other">Other</option>
 
                                         </select>
                                     </div>
 
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Location">
+                                        <input required type="text" id="heroLocation" placeholder="Location">
                                     </div>
 
                                     <div class="button-box">
-                                        <div class="primary-btn-wrap">
+                                        <button class="primary-btn-wrap">
                                             <p>Submit</p>
                                             <div class="svg-wrap">
 
@@ -160,7 +160,7 @@
                                                 </svg>
                                             </div>
 
-                                        </div>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -1135,23 +1135,23 @@
                             Schedule a free Consultation
                         </h3>
 
-                        <form action="" id="contactForm">
+                        <form action="thankyou.html" id="contactForm">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input id="name" name="name" type="text" placeholder="Enter Your name">
+                                    <input required id="name" name="name" type="text" placeholder="Enter Your name">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input id="email" name="email" type="text" placeholder="Enter Your Email">
+                                    <input required id="email" name="email" type="text" placeholder="Enter Your Email">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input id="phone" name="phone" type="text" placeholder="Enter Your Phone">
+                                    <input required id="phone" name="phone" type="text" placeholder="Enter Your Phone">
                                 </div>
 
                                 <div class="col-lg-6">
 
-                                    <select name="service" id="service">
+                                    <select required name="service" id="service">
                                         <option selected disabled value="">Service</option>
                                         <option value="Interior Design">Interior Design</option>
                                         <option value="nterior Fitout">Interior Fitout</option>
@@ -1164,7 +1164,7 @@
                                 <div class="col-lg-6">
 
 
-                                    <select name="projects" id="projects">
+                                    <select required name="projects" id="projects">
                                         <option selected disabled value="">Projects</option>
                                         <option value="Commercial">Commercial</option>
                                         <option value="Residential">Residential</option>
@@ -1178,7 +1178,7 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input id="location" name="location" type="text" placeholder="Location">
+                                    <input required id="location" name="location" type="text" placeholder="Location">
                                 </div>
 
                                 <div class="button-box">
@@ -1315,6 +1315,35 @@
 
             // Create the WhatsApp URL with the phone number and the message
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Redirect to thankyou.html after 1 second (adjust timing as needed)
+            setTimeout(function () {
+                window.location.href = 'thankyou.html';
+            }, 1000); // 1 second delay to allow WhatsApp window to open
+        });
+
+
+
+        document.getElementById('HerocontactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const heroName = document.getElementById('heroName').value;
+            const heroEmial = document.getElementById('heroEmial').value;
+            const heroPhone = document.getElementById('heroPhone').value;
+            const heroService = document.getElementById('heroService').value;
+            const heroProjects = document.getElementById('heroProjects').value;
+            const heroLocation = document.getElementById('heroLocation').value;
+
+            // WhatsApp number (with country code, e.g., 1234567890 for +1234567890)
+            const heroPhoneNumber = '919188683691';
+
+            // Generate WhatsApp message text
+            const heroMessage = `Hello, here is the form data: %0AName: ${heroName}%0Email: ${heroEmial}%0Phone: ${heroPhone}%0Service: ${heroService}%0Projects: ${heroProjects}%0Location: ${heroLocation}`;
+
+            // Create the WhatsApp URL with the phone number and the message
+            const whatsappUrl = `https://wa.me/${heroPhoneNumber}?text=${heroMessage}`;
 
             // Open WhatsApp in a new tab
             window.open(whatsappUrl, '_blank');
