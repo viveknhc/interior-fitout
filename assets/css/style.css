@@ -1190,3 +1190,21 @@ footer .copy-right p {
 .hidden{
     visibility: hidden;
 }
+
+.thankyou{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thankyou h1{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 60px;
+}
+
+.thankyou p{
+    font-size: 20px;
+}
