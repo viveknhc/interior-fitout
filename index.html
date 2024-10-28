@@ -1293,7 +1293,7 @@
             const heroService = document.getElementById('heroService').value;
             const heroProjects = document.getElementById('heroProjects').value;
             const heroLocation = document.getElementById('heroLocation').value;
-            const heroMessage = `Enquire from Website:%0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
+            const heroMessage = `Enquire from Website %0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
             console.log(heroMessage)
             const heroMailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
             window.open(heroMailUrl, '_blank');
@@ -1313,7 +1313,7 @@
             const heroProjectsMob = document.getElementById('heroProjectsMob').value;
             const heroLocationMob = document.getElementById('heroLocationMob').value;
 
-            const heroMessageMob = `Enquire from Website:%0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
+            const heroMessageMob = `Enquire from Website %0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
 
             const heroMailUrlMob = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessageMob}`;
             window.open(heroMailUrlMob, '_blank');
@@ -1338,7 +1338,7 @@
             const projects = document.getElementById('projects').value;
             const location = document.getElementById('location').value;
 
-            const message = `Enquire from Website: %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(offeredService)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
+            const message = `Enquire from Website  %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(offeredService)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
             const mailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
 
             window.open(mailUrl, '_blank');
