@@ -247,42 +247,42 @@
     <section class="consultation-mob">
         <div class="form-box">
             <h4 data-aos="fade-up" data-aos-duration="1500">Schedule a Consultation</h4>
-            <form action="" data-aos="fade-up" data-aos-duration="1500">
+            <form action="" data-aos="fade-up" data-aos-duration="1500" id="HerocontactFormMob">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <input type="text" placeholder="Enter Your Name">
+                        <input id="heroNameMob" type="text" placeholder="Enter Your Name">
                     </div>
                     <div class="col-lg-6">
-                        <input type="text" placeholder="Enter Your Email">
+                        <input id="heroEmailMob" type="text" placeholder="Enter Your Email">
                     </div>
                     <div class="col-lg-6">
-                        <input type="text" placeholder="Enter Your Phone">
+                        <input id="heroPhoneMob" type="text" placeholder="Enter Your Phone">
                     </div>
 
                     <div class="col-lg-6">
-                        <select name="service" id="service">
+                        <select name="heroServiceMob" id="heroServiceMob">
                             <option selected disabled value="">Service</option>
-                            <option value="Service1">Interior Design</option>
-                            <option value="Service2">Interior Fitout</option>
-                            <option value="Service3">Interior Design & Fitout</option>
+                            <option value="Interior Design">Interior Design</option>
+                            <option value="Interior Fitout">Interior Fitout</option>
+                            <option value="Interior Design & Fitout">Interior Design & Fitout</option>
 
                         </select>
                     </div>
 
                     <div class="col-lg-6">
-                        <select name="projects" id="projects">
+                        <select name="heroProjectsMob" id="heroProjectsMob">
                             <option selected disabled value="">Projects</option>
-                            <option value="Service1">Commercial</option>
-                            <option value="Service2">Residential</option>
-                            <option value="Service3">Retail</option>
-                            <option value="Service3">Hospitality</option>
-                            <option value="Service3">Other</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Other">Other</option>
 
                         </select>
                     </div>
 
                     <div class="col-lg-6">
-                        <input type="text" placeholder="Location">
+                        <input id="heroLocationMob" type="text" placeholder="Location">
                     </div>
 
                     <div class="button-box">
@@ -1298,6 +1298,8 @@
     <script src="assets/js/script.js"></script>
 
     <script>
+
+        // contact form in bottom section
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -1307,48 +1309,51 @@
             const service = document.getElementById('service').value;
             const projects = document.getElementById('projects').value;
             const location = document.getElementById('location').value;
-
-            // Generate the email message body, ensuring proper encoding for newlines
             const message = `Hello, here is the form data: %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
-
-            // Create the mailto URL with subject and message
-            const mailUrl = `mailto:info@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
-
-            // Open the email client
+            const mailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
             window.open(mailUrl, '_blank');
-
-            // Redirect to thankyou.html after 1 second (adjust timing as needed)
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); // 1 second delay to allow the email window to open
+            }, 1000); 
         });
 
 
 
         document.getElementById('HerocontactForm').addEventListener('submit', function (event) {
             event.preventDefault();
-
             const heroName = document.getElementById('heroName').value;
             const heroEmail = document.getElementById('heroEmial').value;
             const heroPhone = document.getElementById('heroPhone').value;
             const heroService = document.getElementById('heroService').value;
             const heroProjects = document.getElementById('heroProjects').value;
             const heroLocation = document.getElementById('heroLocation').value;
-
-            // Generate the email message body
             const heroMessage = `Hello, here is the form data:%0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
-
-            // Create the mailto URL with the subject and body
-            const mailUrl = `mailto:info@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
-
-            // Open the default email client
-            window.open(mailUrl, '_blank');
-
-            // Redirect to thankyou.html after 1 second (adjust timing as needed)
+            console.log(heroMessage)
+            const heroMailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
+            window.open(heroMailUrl, '_blank');
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); // 1 second delay to allow email client to open
+            }, 1000); 
         });
+
+
+        document.getElementById('HerocontactFormMob').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const heroNameMob = document.getElementById('heroNameMob').value;
+            const heroEmailMob = document.getElementById('heroEmialMob').value;
+            const heroPhoneMob = document.getElementById('heroPhoneMob').value;
+            const heroServiceMob = document.getElementById('heroServiceMob').value;
+            const heroProjectsMob = document.getElementById('heroProjectsMob').value;
+            const heroLocationMob = document.getElementById('heroLocationMob').value;
+            const heroMessageMob = `Hello, here is the form data:%0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
+
+            const heroMailUrlMob = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessageMob}`;
+            window.open(heroMailUrlMob, '_blank');
+            setTimeout(function () {
+                window.location.href = 'thankyou.html';
+            }, 1000); 
+        });
+
 
     </script>
 
