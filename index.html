@@ -250,46 +250,43 @@
             <form action="" data-aos="fade-up" data-aos-duration="1500" id="HerocontactFormMob">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <input id="heroNameMob" type="text" placeholder="Enter Your Name">
+                        <input id="heroNameMob" type="text" placeholder="Enter Your Name" required>
                     </div>
                     <div class="col-lg-6">
-                        <input id="heroEmailMob" type="text" placeholder="Enter Your Email">
+                        <input id="heroEmailMob" type="email" placeholder="Enter Your Email" required>
                     </div>
                     <div class="col-lg-6">
-                        <input id="heroPhoneMob" type="text" placeholder="Enter Your Phone">
+                        <input id="heroPhoneMob" type="tel" placeholder="Enter Your Phone" required>
                     </div>
 
                     <div class="col-lg-6">
-                        <select name="heroServiceMob" id="heroServiceMob">
+                        <select name="heroServiceMob" id="heroServiceMob" required>
                             <option selected disabled value="">Service</option>
                             <option value="Interior Design">Interior Design</option>
                             <option value="Interior Fitout">Interior Fitout</option>
                             <option value="Interior Design & Fitout">Interior Design & Fitout</option>
-
                         </select>
                     </div>
 
                     <div class="col-lg-6">
-                        <select name="heroProjectsMob" id="heroProjectsMob">
+                        <select name="heroProjectsMob" id="heroProjectsMob" required>
                             <option selected disabled value="">Projects</option>
                             <option value="Commercial">Commercial</option>
                             <option value="Residential">Residential</option>
                             <option value="Retail">Retail</option>
                             <option value="Hospitality">Hospitality</option>
                             <option value="Other">Other</option>
-
                         </select>
                     </div>
 
                     <div class="col-lg-6">
-                        <input id="heroLocationMob" type="text" placeholder="Location">
+                        <input id="heroLocationMob" type="text" placeholder="Location" required>
                     </div>
 
                     <div class="button-box">
-                        <div class="primary-btn-wrap">
+                        <button type="submit" class="primary-btn-wrap">
                             <p>Submit</p>
                             <div class="svg-wrap">
-
                                 <svg width="27" height="16" viewBox="0 0 27 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -297,10 +294,8 @@
                                         fill="#0168AC" />
                                 </svg>
                             </div>
-
-                        </div>
+                        </button>
                     </div>
-
                 </div>
             </form>
         </div>
@@ -1314,7 +1309,7 @@
             window.open(mailUrl, '_blank');
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); 
+            }, 1000);
         });
 
 
@@ -1333,27 +1328,29 @@
             window.open(heroMailUrl, '_blank');
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); 
+            }, 1000);
         });
 
 
         document.getElementById('HerocontactFormMob').addEventListener('submit', function (event) {
             event.preventDefault();
+
             const heroNameMob = document.getElementById('heroNameMob').value;
-            const heroEmailMob = document.getElementById('heroEmialMob').value;
+            const heroEmailMob = document.getElementById('heroEmailMob').value; 
             const heroPhoneMob = document.getElementById('heroPhoneMob').value;
             const heroServiceMob = document.getElementById('heroServiceMob').value;
             const heroProjectsMob = document.getElementById('heroProjectsMob').value;
             const heroLocationMob = document.getElementById('heroLocationMob').value;
+
             const heroMessageMob = `Hello, here is the form data:%0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
 
             const heroMailUrlMob = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessageMob}`;
             window.open(heroMailUrlMob, '_blank');
+
             setTimeout(function () {
                 window.location.href = 'thankyou.html';
-            }, 1000); 
+            }, 1000);
         });
-
 
     </script>
 
