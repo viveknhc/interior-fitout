@@ -1130,18 +1130,18 @@
                             Schedule a free Consultation
                         </h3>
 
-                        <form id="contactForm">
+                        <form id="contactForm" action="submit.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <input required id="name" name="name" type="text" placeholder="Enter Your Name">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input required id="email" name="email" type="text" placeholder="Enter Your Email">
+                                    <input required id="email" name="email" type="email" placeholder="Enter Your Email">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <input required id="phone" name="phone" type="text" placeholder="Enter Your Phone">
+                                    <input required id="tel" name="tel" type="text" placeholder="Enter Your Phone">
                                 </div>
 
                                 <div class="col-lg-6">
@@ -1154,7 +1154,7 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <select required name="projects" id="projects">
+                                    <select required name="project_type" id="projects">
                                         <option selected disabled value="">Projects</option>
                                         <option value="Commercial">Commercial</option>
                                         <option value="Residential">Residential</option>
@@ -1284,69 +1284,72 @@
 
     <script>
 
+        // -------------------------------  Contact submit form in Laptop screen -------------------------------//
 
-        document.getElementById('HerocontactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const heroName = document.getElementById('heroName').value;
-            const heroEmail = document.getElementById('heroEmial').value;
-            const heroPhone = document.getElementById('heroPhone').value;
-            const heroService = document.getElementById('heroService').value;
-            const heroProjects = document.getElementById('heroProjects').value;
-            const heroLocation = document.getElementById('heroLocation').value;
-            const heroMessage = `Enquire from Website %0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
-            console.log(heroMessage)
-            const heroMailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
-            window.open(heroMailUrl, '_blank');
-            setTimeout(function () {
-                window.location.href = 'thankyou.html';
-            }, 1000);
-        });
-
-
-        document.getElementById('HerocontactFormMob').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const heroNameMob = document.getElementById('heroNameMob').value;
-            const heroEmailMob = document.getElementById('heroEmailMob').value;
-            const heroPhoneMob = document.getElementById('heroPhoneMob').value;
-            const heroServiceMob = document.getElementById('heroServiceMob').value;
-            const heroProjectsMob = document.getElementById('heroProjectsMob').value;
-            const heroLocationMob = document.getElementById('heroLocationMob').value;
-
-            const heroMessageMob = `Enquire from Website %0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
-
-            const heroMailUrlMob = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessageMob}`;
-            window.open(heroMailUrlMob, '_blank');
-
-            setTimeout(function () {
-                window.location.href = 'thankyou.html';
-            }, 1000);
-        });
+        // document.getElementById('HerocontactForm').addEventListener('submit', function (event) {
+        //     event.preventDefault();
+        //     const heroName = document.getElementById('heroName').value;
+        //     const heroEmail = document.getElementById('heroEmial').value;
+        //     const heroPhone = document.getElementById('heroPhone').value;
+        //     const heroService = document.getElementById('heroService').value;
+        //     const heroProjects = document.getElementById('heroProjects').value;
+        //     const heroLocation = document.getElementById('heroLocation').value;
+        //     const heroMessage = `Enquire from Website %0AName: ${encodeURIComponent(heroName)}%0AEmail: ${encodeURIComponent(heroEmail)}%0APhone: ${encodeURIComponent(heroPhone)}%0AService: ${encodeURIComponent(heroService)}%0AProjects: ${encodeURIComponent(heroProjects)}%0ALocation: ${encodeURIComponent(heroLocation)}`;
+        //     console.log(heroMessage)
+        //     const heroMailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessage}`;
+        //     window.open(heroMailUrl, '_blank');
+        //     setTimeout(function () {
+        //         window.location.href = 'thankyou.html';
+        //     }, 1000);
+        // });
 
 
+        // ------------------------------- Contact submit form in Mobile screen -------------------------------//
+
+        // document.getElementById('HerocontactFormMob').addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     const heroNameMob = document.getElementById('heroNameMob').value;
+        //     const heroEmailMob = document.getElementById('heroEmailMob').value;
+        //     const heroPhoneMob = document.getElementById('heroPhoneMob').value;
+        //     const heroServiceMob = document.getElementById('heroServiceMob').value;
+        //     const heroProjectsMob = document.getElementById('heroProjectsMob').value;
+        //     const heroLocationMob = document.getElementById('heroLocationMob').value;
+
+        //     const heroMessageMob = `Enquire from Website %0AName: ${encodeURIComponent(heroNameMob)}%0AEmail: ${encodeURIComponent(heroEmailMob)}%0APhone: ${encodeURIComponent(heroPhoneMob)}%0AService: ${encodeURIComponent(heroServiceMob)}%0AProjects: ${encodeURIComponent(heroProjectsMob)}%0ALocation: ${encodeURIComponent(heroLocationMob)}`;
+
+        //     const heroMailUrlMob = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${heroMessageMob}`;
+        //     window.open(heroMailUrlMob, '_blank');
+
+        //     setTimeout(function () {
+        //         window.location.href = 'thankyou.html';
+        //     }, 1000);
+        // });
 
 
 
-        // contact form in bottom section
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const offeredService = document.getElementById('offeredService').value;
-            const projects = document.getElementById('projects').value;
-            const location = document.getElementById('location').value;
+        // -------------------------------Contact submit form in Bottom screen -------------------------------//
+        
+        // document.getElementById('contactForm').addEventListener('submit', function (event) {
+        //     event.preventDefault();
 
-            const message = `Enquire from Website  %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(offeredService)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
-            const mailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const phone = document.getElementById('phone').value;
+        //     const offeredService = document.getElementById('offeredService').value;
+        //     const projects = document.getElementById('projects').value;
+        //     const location = document.getElementById('location').value;
 
-            window.open(mailUrl, '_blank');
+        //     const message = `Enquire from Website  %0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(offeredService)}%0AProjects: ${encodeURIComponent(projects)}%0ALocation: ${encodeURIComponent(location)}`;
+        //     const mailUrl = `mailto:info@fitoutbureau.com,anaz@fitoutbureau.com?subject=Form%20Submission&body=${message}`;
 
-            setTimeout(function () {
-                window.location.href = 'thankyou.html';
-            }, 1000);
-        });
+        //     window.open(mailUrl, '_blank');
+
+        //     setTimeout(function () {
+        //         window.location.href = 'thankyou.html';
+        //     }, 1000);
+        // });
 
 
 
